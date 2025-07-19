@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VaultofCodes - Certificate Verifier (Dev)</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="background-gradient"></div>
+  <div class="bg-shape bg-shape1"></div>
+  <div class="bg-shape bg-shape2"></div>
+  <div class="bg-shape bg-shape3"></div>
+  <div class="star star1"></div>
+  <div class="star star2"></div>
+  <div class="star star3"></div>
+  <div class="star star4"></div>
+  <div class="star star5"></div>
+  <canvas id="bg-anim"></canvas>
+  <main class="main-center">
+    <section class="verifier-section" aria-label="Certificate Verifier">
+      <div class="glass-card">
+        <img src="vaultofcodes-logo.png" alt="VaultofCodes Logo" class="brand-logo" />
+        <h1 class="brand-title">VaultofCodes</h1>
+        <div class="divider"></div>
+        <h2 class="verifier-title">Certificate Verification</h2>
+        <form class="verifier-form" onsubmit="event.preventDefault(); verifyStudent();" autocomplete="off">
+          <div class="input-group">
+            <span class="input-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.5 5.5A2 2 0 0 1 4.5 3.5h11a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-9Zm1.6.6 6.4 5.1 6.4-5.1M17.5 6.2l-6.4 5.1a1 1 0 0 1-1.2 0L3.5 6.2" stroke="#bfc6d1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <input id="identifier" type="text" required placeholder=" " aria-label="Email or ID" />
+            <label for="identifier" class="floating-label">Enter Email or ID</label>
+          </div>
+          <button type="submit">Verify</button>
+        </form>
+        <div class="spinner hidden" aria-live="polite"></div>
+        <div id="result" aria-live="polite"></div>
+        <img src="vaultofcodes-logo.png" alt="Logo Watermark" class="card-watermark" />
+      </div>
+    </section>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <button id="back-to-top" aria-label="Back to Top" style="display:none;">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
